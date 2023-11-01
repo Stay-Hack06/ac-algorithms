@@ -7,16 +7,45 @@ Read through the function and write comments to explain what is happening in the
  2. How would you display the actual word in the console?
  */
 
+// function findLongestWord(str) {
+//   var words = str.split(' ');
+//   var longestWordLength = 0;
+  
+//   for (var i = 0; i < words.length; i++) {
+//     if (words[i].length > longestWordLength) {
+//       longestWordLength = words[i].length;
+//     }
+//   }
+  
+//   return longestWordLength;
+// }
+
+function findShortestWord(str) {
+  var words = str.split(' ');
+  var shortestWordLength = Infinity;
+  
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length < shortestWordLength) {
+      shortestWordLength = words[i].length;
+    }
+  }
+  
+  return shortestWordLength;
+}
+
 function findLongestWord(str) {
   var words = str.split(' ');
   var longestWordLength = 0;
+  var longestWord = '';
   
   for (var i = 0; i < words.length; i++) {
     if (words[i].length > longestWordLength) {
       longestWordLength = words[i].length;
+      longestWord = words[i];
     }
   }
   
+  console.log('Longest Word:', longestWord);
+  
   return longestWordLength;
 }
-
