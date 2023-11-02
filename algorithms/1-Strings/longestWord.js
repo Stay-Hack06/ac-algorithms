@@ -7,45 +7,47 @@ Read through the function and write comments to explain what is happening in the
  2. How would you display the actual word in the console?
  */
 
-// function findLongestWord(str) {
-//   var words = str.split(' ');
-//   var longestWordLength = 0;
-  
-//   for (var i = 0; i < words.length; i++) {
-//     if (words[i].length > longestWordLength) {
-//       longestWordLength = words[i].length;
-//     }
-//   }
-  
-//   return longestWordLength;
-// }
+// This function takes a string 'str' as input and finds the length of the longest word in the string.
+
+function findLongestWord(str) {
+  // Split the input string 'str' into an array of words using space (' ') as the separator and store it in the 'words' array.
+  var words = str.split(' ');
+  // Initialize a variable 'longestWordLength' to keep track of the length of the longest word found. Start with 0.
+
+  var longestWordLength = 0;
+  // Iterate through the 'words' array to find the longest word.
+  for (var i = 0; i < words.length; i++) {
+  // Check if the length of the current word is greater than the current 'longestWordLength'.
+    if (words[i].length > longestWordLength) {
+      // If it is longer, update 'longestWordLength' with the length of the current word.
+      longestWordLength = words[i].length;
+    }
+  }
+  // After the loop, 'longestWordLength' contains the length of the longest word in the input string.
+  // Return this value as the result.
+  return longestWordLength;
+}
+
+console.log('Longest Word:', longestWord);
+
+
 
 function findShortestWord(str) {
   var words = str.split(' ');
-  var shortestWordLength = Infinity;
-  
-  for (var i = 0; i < words.length; i++) {
-    if (words[i].length < shortestWordLength) {
-      shortestWordLength = words[i].length;
+  var shortestWord = words[0]; 
+
+  for (var i = 1; i < words.length; i++) {
+    if (words[i].length < shortestWord.length) {
+      shortestWord = words[i]; 
     }
   }
-  
-  return shortestWordLength;
+
+  return shortestWord;
 }
 
-function findLongestWord(str) {
-  var words = str.split(' ');
-  var longestWordLength = 0;
-  var longestWord = '';
-  
-  for (var i = 0; i < words.length; i++) {
-    if (words[i].length > longestWordLength) {
-      longestWordLength = words[i].length;
-      longestWord = words[i];
-    }
-  }
-  
-  console.log('Longest Word:', longestWord);
-  
-  return longestWordLength;
-}
+
+let text = "Witches will forever cast";
+console.log("Shortest word:", findShortestWord(text));
+
+
+

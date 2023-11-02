@@ -20,7 +20,19 @@ Steps:
  */
 
 function hasDuplicates(arr) {
-   
+    const encounteredNumbers = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        const num = arr[i];
+
+        if (encounteredNumbers[num]) {
+            return true;
+        } else {
+            encounteredNumbers[num] = true;
+        }
+    }
+
+    return false;
 }
 
 // Example usage
