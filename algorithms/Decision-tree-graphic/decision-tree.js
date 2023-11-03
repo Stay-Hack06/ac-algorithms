@@ -7,9 +7,9 @@ function transportationOptions() {
 
   if (weather === "Sun") {
     time = prompt("What time do you have to get there?");
-    if (time <= 30) {
+    if (time >= 30) {
       console.log("You should walk.");
-    } else {
+    } else if (time < 30) {
       console.log("You should take the bus.");
     }
   } else if (weather === "Clouds") {

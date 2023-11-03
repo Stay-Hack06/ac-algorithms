@@ -31,12 +31,13 @@ function hasDuplicates(arr) {
             encounteredNumbers[num] = true;
         }
     }
-
+    
     return false;
 }
 
-// Example usage
+
 const numbers1 = [1, 2, 3, 4, 5, 6];
 const numbers2 = [1, 2, 3, 4, 2, 6];
-console.log(hasDuplicates(numbers1)); // Output: false
-console.log(hasDuplicates(numbers2)); // Output: true
+console.log(hasDuplicates(numbers1)); 
+console.log(hasDuplicates(numbers2)); 
+
